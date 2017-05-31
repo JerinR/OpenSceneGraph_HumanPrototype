@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <OSG_UNCC_PACKAGE_DIR>%OSG_UNCC_PACKAGE_DIR%</OSG_UNCC_PACKAGE_DIR>
+    <MSVS_VERSION>MSVS_2015</MSVS_VERSION>
+    <OSG_PLUGIN_SUBDIR>osgPlugins-3.5.6</OSG_PLUGIN_SUBDIR>
+    <OSG_UNCC_PACKAGE_BIN_PATHS>$(OSG_UNCC_PACKAGE_DIR)\install\$(MSVS_VERSION)\$(Platform)\bin;$(OSG_UNCC_PACKAGE_DIR)\install\$(MSVS_VERSION)\$(Platform)\bin\$(OSG_PLUGIN_SUBDIR)</OSG_UNCC_PACKAGE_BIN_PATHS>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup />
+  <ItemGroup>
+    <BuildMacro Include="OSG_UNCC_PACKAGE_DIR">
+      <Value>$(OSG_UNCC_PACKAGE_DIR)</Value>
+    </BuildMacro>
+    <BuildMacro Include="MSVS_VERSION">
+      <Value>$(MSVS_VERSION)</Value>
+    </BuildMacro>
+    <BuildMacro Include="OSG_PLUGIN_SUBDIR">
+      <Value>$(OSG_PLUGIN_SUBDIR)</Value>
+    </BuildMacro>
+    <BuildMacro Include="OSG_UNCC_PACKAGE_BIN_PATHS">
+      <Value>$(OSG_UNCC_PACKAGE_BIN_PATHS)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

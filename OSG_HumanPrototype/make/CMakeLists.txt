@@ -1,0 +1,23 @@
+cmake_minimum_required( VERSION 2.6 )
+project( Assignment1 )
+find_package( OpenThreads )
+find_package( osg )
+find_package( osgGA )
+find_package( osgUtil )
+find_package( osgDB )
+find_package( osgViewer )
+
+macro( config_project PROJNAME LIBNAME )
+include_directories( ${${LIBNAME}_INCLUDE_DIR} )
+target_link_libraries( ${PROJNAME} optimized ${${LIBNAME}_LIBRARY} )
+target_link_libraries( ${PROJNAME} debug ${${LIBNAME}_LIBRARY_DEBUG} )
+endmacro()
+
+add_executable( Assignment1 ../ExampleClass.h ../ExampleClass.cpp ../main.cpp )
+
+config_project( Assignment1 OPENTHREADS )
+config_project( Assignment1 OSG )
+config_project( Assignment1 OSGGA )
+config_project( Assignment1 OSGUTIL )
+config_project( Assignment1 OSGVIEWER )	
+config_project( Assignment1 OSGDB )
